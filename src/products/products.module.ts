@@ -3,6 +3,7 @@ import { ProductsService } from './products.service';
 import { ProductsController } from './products.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Product, ProductImage } from './entities/index';
+import { AuthModule } from 'src/auth/auth.module';
 
 @Module({
   controllers: [ProductsController],
@@ -12,6 +13,7 @@ import { Product, ProductImage } from './entities/index';
       Product,
       ProductImage
     ]),
+    AuthModule
   ],
   exports: [
     ProductsService,

@@ -25,5 +25,9 @@ export const JoiValidationSchema = Joi.object({
     'any.required': ` Database Name conection is required!`,
     'string.base': `  Database Name must be valid text`,
   }),
+  JWT_SECRET: Joi.string().required().messages({
+    'any.required': ` JWT secret is required!`,
+    'string.base': ` JWT secret must be valid text`,
+  }),
 
 });
